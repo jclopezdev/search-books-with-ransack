@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: 
+  name: MyString
+  author: MyString
+  year: 1
+  price: 9.99
+  status: false
+  genre: 1
+
+two:
+  isbn: 
+  name: MyString
+  author: MyString
+  year: 1
+  price: 9.99
+  status: false
+  genre: 1
