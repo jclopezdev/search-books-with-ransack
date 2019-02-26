@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="card-header">
+    Filters
+  </div>
+  <div class="card-body">
+    <%= search_form_for @q do |f| %>
+      <div class="form-group">
+        <%= f.label :isbn %>
+        <%= f.number_field :isbn_eq, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name_cont, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :year %>
+        <%= f.text_field :year_eq, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :price, "Price" %>
+        <div class="row">
+          <div class="col">
+            <%= f.text_field :price_gteq, class: 'form-control' %>
+          </div>
+          <div class="col">
+            <%= f.text_field :price_lteq, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :genre %>
+        <%= f.select(:genre_eq, options_for_select(Book.genres.map {|k, v| [k.humanize.capitalize, v]}, f.object.genre_eq), { include_blank: true }, {class: "form-control" }) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.check_box :status_true, include_hidden: false %>
+        <%= f.label :status, 'Active' %>
+      </div>
+
+      <div class="form-group">
+        <div class="float-right">
+          <%= link_to "Clear", request.path, :class => "btn btn-default" %>
+
+          <%= f.submit class: 'btn btn-primary' %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
