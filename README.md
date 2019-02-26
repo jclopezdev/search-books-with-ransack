@@ -1,24 +1,12 @@
-# README
+# Searching with Ransack and Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple app to search books by different types of fields using Ruby on Rails, Bootstrap, Will paginate, Faker, and Ransack.
 
-Things you may want to cover:
+![Ransack](http://blog.magmalabs.io/wp-content/uploads/2019/02/Screen-Shot-2019-02-26-at-3.56.57-PM.png)
 
-* Ruby version
+### Dependencies:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [Faker](https://github.com/stympy/faker) – A library for generating fake data, we will use this gem to generate books data.
+- [Bootstrap](https://github.com/twbs/bootstrap-rubygem) – The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
+- [Ransack](https://github.com/activerecord-hackery/ransack) – Object-based searching for use in our books controller
+- [will_paginate-bootstrap4](https://github.com/delef/will_paginate-bootstrap4) – Pagination library for Rails that matches Twitter Bootstrap 4 styling
