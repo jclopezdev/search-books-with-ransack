@@ -13,6 +13,7 @@
     author: Faker::Book.author,
     year: Faker::Number.between(1900, 2019),
     genre: Faker::Number.between(1, 5),
-    price: Faker::Commerce.price
+    price: Faker::Commerce.price,
+    status: Faker::Boolean.boolean
   )
 end
